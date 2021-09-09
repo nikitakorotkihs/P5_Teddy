@@ -2,69 +2,95 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="P5_Teddy/css/checkout-page.css">
+    <link rel="stylesheet" href="/P5_Teddy/css/checkout-page.css">
 </head>
 
 <body>
-    <div class="payment-container">
-        <div class="site-nav">
-            <ul>
-                <li class="normal">Home Page</li>
-                <li class="normal">Products</li>
-                <li class="highlighted">Payment</li>
-                <li class="normal">Reviews</li>
-            </ul>
-        </div>
-        <div class="main">
-            <div class="left-illustration">
-                <img class="illustration-image" src="/P5_Teddy/JWDP5/images/teddy_5.jpg" />
-            </div>
-            <div class="right-payment-info">
-                <div class="payment-method">
-                    <h2>Payment Method</h2>
-                    <div class="radio-container">
-                        <input id="card" name="payment-type" type="radio" checked>
-                        <label for="card">Card</label>
-                        <input id="paypal" name="payment-type" type="radio">
-                        <label for="paypal">PayPal</label>
-                        <input id="paypal" name="payment-type" type="radio">
-                        <label for="paypal">PayPal</label>
-                        <input id="paypal" name="payment-type" type="radio">
-                        <label for="paypal">PayPal</label>
-                    </div>
+    <div class="page-container">
+        <div class=" background-mainsection-checkout">
+            <div class="payment-container">
+                <div class="checkout-nav">
+                    <ul>
+                        <li class="normal">Home Page</li>
+                        <li class="normal">Products</li>
+                        <li class="highlighted">Payment</li>
+                    </ul>
                 </div>
-                <form id="payment-form">
-                    <div class="card-info-container">
-                        <div class="card-info">
-                            <label>Card Number
-                                <input class="full-width" id="card-num" type="text" placeholder="1234 5678 9012 3456">
+
+                <div class="right-payment-info  ">
+                    <div class="payment-method ">
+
+                        <div class="payment-method-text"> Delivery Adress </div>
+                    </div>
+                    <form id="payment-form">
+                        <div class="card-info-container">
+                            <div class="card-info">
+                                <label>Name Surname
+                                <input class="full-width" id="card-num" type="text" placeholder="Name Surname">
                             </label>
-                            <label>Name on Card
-                                <input class="full-width" id="name" type="text" placeholder="Steve Rogers">
+                                <label>Email Adress
+                                <input class="full-width" id="name" type="text" placeholder="Email Adress">
                             </label>
-                            <div class="expire-ccv">
-                                <label>Expires
+                                <label> Delivery Adress
+                                <input class="full-width" id="name" type="text" placeholder="Adress">
+                                <input class="full-width" id="name" type="text" placeholder="City">
+                            </label>
+                                <label> Country
+                                <input class="full-width" id="name" type="text" placeholder="Country">
+                            </label>
+                            </div>
+                        </div>
+                        <label class="save-card-info">
+                        <input type="checkbox">
+                        Save adress for faster checkout
+                    </label>
+                    </form>
+                </div>
+
+                <div class="right-payment-info">
+                    <div class="payment-method">
+                        <div class="payment-method-text"> Payments </div>
+                        <div class="radio-container">
+                            <input id="visa" name="payment-type" type="radio" checked>
+                            <label for="visa">Visa</label>
+                            <input id="mastercard" name="payment-type" type="radio">
+                            <label for="mastercard">MasterCard</label>
+                            <input id="paypal" name="payment-type" type="radio">
+                            <label for="paypal">PayPal</label>
+                        </div>
+                    </div>
+                    <form id="payment-form">
+                        <div class="card-info-container">
+                            <div class="card-info">
+                                <label>Card Number
+                                <input class="full-width" id="card-num" type="text" placeholder="132 654 798 132">
+                            </label>
+                                <label>Name on Card
+                                <input class="full-width" id="name" type="text" placeholder="Name Surname">
+                            </label>
+                                <div class="expire-ccv">
+                                    <label>Expires
                                     <span class="expire-date">
                                         <input id="month" type="text" size="2" maxlength="2" placeholder="MM">
                                         <span>/</span>
                                         <input id="year" type="text" size="2" maxlength="2" placeholder="YY">
                                     </span>
                                 </label>
-                                <label>CCV
-                                    <input id="ccv" type="text" size="3" maxlength="3" placeholder="123">
+                                    <label>CCV
+                                    <input id="ccv" type="text" size="3" maxlength="3" placeholder="789">
                                 </label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <label class="save-card-info">
+                        <label class="save-card-info">
                         <input type="checkbox">
                         Save card for faster checkout
                     </label>
-                </form>
-                <button class="button" onclick="document.getElementById('payment-form').reset()">Place Your Order</button>
+                    </form>
+                </div>
+                <button class="button" onclick="document.getElementById('payment-form').reset()">Submit Your Order</button>
             </div>
         </div>
-    </div>
     </div>
 
 </body>
