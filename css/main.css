@@ -1,5 +1,6 @@
 @import url(navbar.css);
 @import url(footer.css);
+@import url(checkout-page.css);
 .body {
     width: auto;
     height: auto;
@@ -78,8 +79,8 @@
 }
 
 .poloroid {
-    max-width: 40rem;
-    max-height: 40rem;
+    max-width: 25rem;
+    max-height: 45rem;
     background-color: white;
     margin-bottom: 1.563rem;
     margin: 2rem;
@@ -111,24 +112,3 @@
 .product-name {
     font-weight: 700;
 }
-
-
-/**
-
-.footer_container {
-    height: 50px;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: grey;
-}
-
-.footer-text {
-    margin-left: 5rem;
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: underline;
-}
-**/
