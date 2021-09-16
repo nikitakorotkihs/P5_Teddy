@@ -182,9 +182,9 @@ input:focus {
 }
 
 .button {
-    margin: 5px;
-    width: 200px;
-    height: 30px;
+    margin: 20px;
+    width: 300px;
+    height: 40px;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 16px;
@@ -199,7 +199,7 @@ input:focus {
 }
 
 button:hover {
-    background-color: #7bf42a;
+    background-color: darkcyan;
 }
 
 .background-mainsection-checkout {
