@@ -1,11 +1,19 @@
 fetch('http://localhost:3000/api/teddies')
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json => createProductCards(json));
 
-
+function createProductCards(response) {
+    for (let i in response) {
+        console.log(i);
+        let product_data = response[i];
+        console.log("-----");
+        console.log(product_data);
+        console.log('$$$$$$$$$$$');
+        createProductCard(product_data)
+    }
+}
 
 function createProductCard(product) {
-    console.log(product);
     let url = product.imageUrl;
     // Define card element
     let card = document.createElement("div");
@@ -29,9 +37,6 @@ function createProductCard(product) {
     product_price.classList.add("product-price");
     product_price.innerText = product.price;
 
-
-
-
     card.appendChild(ProductImg);
     card.appendChild(product_info);
     product_info.appendChild(product_color);
@@ -43,13 +48,4 @@ function createProductCard(product) {
     // Identify the product section and insert card to that product section
     let productSection = document.querySelector("#product-section");
     productSection.appendChild(card);
-
-
 }
-let product_details = {
-    'imageUrl': '/P5_Teddy/images/teddy_2.jpg',
-    'price': '2900',
-    'color': 'Blue',
-    'description': 'Sample description'
-}
-createProductCard(product_details);
