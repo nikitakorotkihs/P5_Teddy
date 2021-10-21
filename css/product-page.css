@@ -1,61 +1,80 @@
+@import url(navbar.css);
+@import url(footer.css);
 .body {
     width: auto;
     height: auto;
 }
 
-.navbar {
+.product-section {
     width: auto;
-    font-weight: bold;
-    background-color: #192024;
-}
-
-ul {
-    margin: 0;
-    list-style-type: none;
+    height: auto;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding: 1em 0;
 }
 
-li:first-child {
-    margin-right: auto;
-    margin-left: 3em;
-}
-
-li a {
-    color: white;
-    text-decoration: none;
-    padding-right: 5em;
-    position: relative;
-    transition: all ease-in-out 550ms;
-}
-
-li a::after {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 0.4em;
-    width: 0%;
-    background-color: violet;
-    bottom: -1em;
-    transition: all ease-in-out 250ms;
-}
-
-li a:hover::after {
-    width: 60%;
-}
-
-li a:hover {
-    color: violet;
-}
-
-.background-mainsection {
-    background-image: url("/Teddy_Img/TD_Background/pexels-johannes-plenio-2080960.jpg");
-    background-repeat: no-repeat;
-    background-color: #cccccc;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
+.product-container {
     width: 100%;
+    height: 100%;
+    background-color: white;
+    margin: 2rem;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: .5rem;
+    position: relative;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img {
+    object-fit: contain;
+    width: 50rem;
+    height: 50rem;
+}
+
+.product-info {
+    height: 50rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.change-color select {
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    border-color: rgb(189, 189, 189);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 24px;
+}
+
+.change-color {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.star-rating {
+    width: 70%;
+    color: gray;
+    font-size: 34px;
+    border-bottom: 0.4px solid rgba(194, 194, 194, 0.829);
+}
+
+.star-rating span {
+    color: gold;
+}
+
+.product-name {
+    font-size: 42px;
+}
+
+.product-price {
+    color: brown;
+    font-size: 32px;
 }
