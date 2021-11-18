@@ -4,6 +4,7 @@ fetch(`http://localhost:3000/api/teddies/${productId}`)
     .then(json => createProductCard(json));
 
 function createProductCard(product) {
+    console.log
     let url = product.imageUrl;
     // Define card element
     let card = document.createElement("div");
@@ -20,14 +21,13 @@ function createProductCard(product) {
     product_name.classList.add("product-name");
     product_name.innerText = product.name;
 
+    let product_price = document.createElement("div");
+    product_price.classList.add("product-price");
+    product_price.innerText = product.price;
 
     let product_color = document.createElement("div");
     product_color.classList.add("change-color");
     product_color.innerText = product.color;
-
-    let product_price = document.createElement("div");
-    product_price.classList.add("product-price");
-    product_price.innerText = product.price;
 
     let product_description = document.createElement("div");
     product_description.classList.add("product-description");
@@ -39,6 +39,8 @@ function createProductCard(product) {
     product_info.appendChild(product_name);
     product_info.appendChild(product_price);
     product_info.appendChild(product_description);
+    product_info.appendChild(product_color);
+
 
 
     //Added 
